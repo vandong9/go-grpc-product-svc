@@ -8,7 +8,6 @@ package pb
 
 import (
 	context "context"
-	services "github.com/vandong9/go-grpc-product-svc/pkg/services"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -70,7 +69,6 @@ type ProductServiceServer interface {
 	CreateProduct(context.Context, *CreateProductRequest) (*CreateProductResponse, error)
 	FindOne(context.Context, *FindOneRequest) (*FindOneResponse, error)
 	DecreaseStock(context.Context, *DecreaseStockRequest) (*DecreaseStockResponse, error)
-	mustEmbedUnimplementedProductServiceServer()
 }
 
 // UnimplementedProductServiceServer must be embedded to have forward compatible implementations.
@@ -95,7 +93,7 @@ type UnsafeProductServiceServer interface {
 	mustEmbedUnimplementedProductServiceServer()
 }
 
-func RegisterProductServiceServer(s grpc.ServiceRegistrar, srv *services.Server) {
+func RegisterProductServiceServer(s grpc.ServiceRegistrar, srv ProductServiceServer) {
 	s.RegisterService(&ProductService_ServiceDesc, srv)
 }
 

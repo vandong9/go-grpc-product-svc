@@ -25,9 +25,9 @@ type CreateProductRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Name  string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
-	Stock int64  `protobuf:"varint,2,opt,name=stock,proto3" json:"stock,omitempty"`
-	Price int64  `protobuf:"varint,3,opt,name=price,proto3" json:"price,omitempty"`
+	Name  string `protobuf:"bytes,1,opt,name=name,proto3" json:"name"`
+	Stock int64  `protobuf:"varint,2,opt,name=stock,proto3" json:"stock"`
+	Price int64  `protobuf:"varint,3,opt,name=price,proto3" json:"price"`
 }
 
 func (x *CreateProductRequest) Reset() {
@@ -88,9 +88,9 @@ type CreateProductResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Status int64  `protobuf:"varint,1,opt,name=status,proto3" json:"status,omitempty"`
-	Error  string `protobuf:"bytes,2,opt,name=error,proto3" json:"error,omitempty"`
-	Id     int64  `protobuf:"varint,3,opt,name=id,proto3" json:"id,omitempty"`
+	Status int64  `protobuf:"varint,1,opt,name=status,proto3" json:"status"`
+	Error  string `protobuf:"bytes,2,opt,name=error,proto3" json:"error"`
+	Id     int64  `protobuf:"varint,3,opt,name=id,proto3" json:"id"`
 }
 
 func (x *CreateProductResponse) Reset() {
@@ -151,10 +151,10 @@ type FindOneData struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id    int64  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
-	Name  string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
-	Stock int64  `protobuf:"varint,3,opt,name=stock,proto3" json:"stock,omitempty"`
-	Price int64  `protobuf:"varint,4,opt,name=price,proto3" json:"price,omitempty"`
+	Id    int64  `protobuf:"varint,1,opt,name=id,proto3" json:"id"`
+	Name  string `protobuf:"bytes,2,opt,name=name,proto3" json:"name"`
+	Stock int64  `protobuf:"varint,3,opt,name=stock,proto3" json:"stock"`
+	Price int64  `protobuf:"varint,4,opt,name=price,proto3" json:"price"`
 }
 
 func (x *FindOneData) Reset() {
@@ -222,7 +222,7 @@ type FindOneRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id int64 `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
+	Id int64 `protobuf:"varint,1,opt,name=id,proto3" json:"id"`
 }
 
 func (x *FindOneRequest) Reset() {
@@ -269,9 +269,9 @@ type FindOneResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Status int64        `protobuf:"varint,1,opt,name=status,proto3" json:"status,omitempty"`
-	Error  string       `protobuf:"bytes,2,opt,name=error,proto3" json:"error,omitempty"`
-	Data   *FindOneData `protobuf:"bytes,3,opt,name=data,proto3" json:"data,omitempty"`
+	Status int64        `protobuf:"varint,1,opt,name=status,proto3" json:"status"`
+	Error  string       `protobuf:"bytes,2,opt,name=error,proto3" json:"error"`
+	Data   *FindOneData `protobuf:"bytes,3,opt,name=data,proto3" json:"data"`
 }
 
 func (x *FindOneResponse) Reset() {
@@ -332,8 +332,8 @@ type DecreaseStockRequest struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id      int64 `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
-	OrderId int64 `protobuf:"varint,2,opt,name=orderId,proto3" json:"orderId,omitempty"`
+	Id      int64 `protobuf:"varint,1,opt,name=id,proto3" json:"id"`
+	OrderId int64 `protobuf:"varint,2,opt,name=orderId,proto3" json:"orderId"`
 }
 
 func (x *DecreaseStockRequest) Reset() {
@@ -387,8 +387,8 @@ type DecreaseStockResponse struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Status int64  `protobuf:"varint,1,opt,name=status,proto3" json:"status,omitempty"`
-	Error  string `protobuf:"bytes,2,opt,name=error,proto3" json:"error,omitempty"`
+	Status int64  `protobuf:"varint,1,opt,name=status,proto3" json:"status"`
+	Error  string `protobuf:"bytes,2,opt,name=error,proto3" json:"error"`
 }
 
 func (x *DecreaseStockResponse) Reset() {
